@@ -1,7 +1,7 @@
 # 🤖 Asistente Virtual de Soporte Técnico
 
-Trabajo de Enfoque — Módulo de Modelos de Inteligencia Artificial  
-Curso de Especialización de Inteligencia Artificial y Big Data · DAVANTE
+Trabajo de Enfoque — Módulo de Modelos de Inteligencia Artificial 
+Hecho por Pablo Quesada Castellano
 
 ---
 
