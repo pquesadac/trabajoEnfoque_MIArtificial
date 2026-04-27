@@ -37,22 +37,15 @@ class Respuesta(BaseModel):
 # Endpoints
 @app.get("/")
 def inicio():
-    """Sirve la interfaz web del chatbot."""
     return FileResponse("static/dashboard.html")
  
  
 @app.post("/consulta", response_model=Respuesta)
-def atender_consulta(consulta: Consulta):
-    """
-    Recibe la consulta del usuario en formato JSON:
-    { "mensaje": "no tengo internet" }
-    Devuelve la respuesta generada por el asistente.
-    """
+def atender_consulta(consulta: Consulta):   
     respuesta = procesar_consulta(consulta.mensaje)
     return Respuesta(respuesta=respuesta)
  
  
 @app.get("/health")
 def health_check():
-    """Endpoint para verificar que la API está en funcionamiento."""
     return {"estado": "ok", "servicio": "Asistente Virtual de Soporte Técnico"}
