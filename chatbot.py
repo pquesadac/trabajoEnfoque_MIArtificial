@@ -101,7 +101,6 @@ clasificador.fit(textos, etiquetas)
  
 # Esta es la funcion de preprocesado con spacy
 def preprocesar(texto: str) -> str:
-    """Limpia el texto eliminando stopwords y puntuación usando spaCy."""
     doc = nlp(texto.lower())
     tokens = [
         token.lemma_ for token in doc
@@ -113,7 +112,6 @@ def preprocesar(texto: str) -> str:
 
 # Esta es la funcion principal
 def procesar_consulta(texto_usuario: str) -> str:
-    """Recibe la consulta del usuario y devuelve una respuesta."""
     texto_limpio = preprocesar(texto_usuario)
  
     if not texto_limpio:
